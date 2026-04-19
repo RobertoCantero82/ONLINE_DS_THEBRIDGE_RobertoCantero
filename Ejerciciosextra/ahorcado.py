@@ -5,7 +5,7 @@ import random
 conjunto_palabras = ["amigo", "coche", "juego", "cosas", "usado", "fuego", "grupo"]
 palabra = random.choice(conjunto_palabras)
 
-# Creo las variables fundamentales en el juego (nº de vidas y las letras que se han adivinado ya)
+# Creo las variables fundamentales en el juego (nº de vidas, letras que se han adivinado y letras que se han fallado)
 
 vidas = 6 # empiezo con 6 vidas
 letras_adivinadas = [] # voy guardando en una lista las letras que he acertado
