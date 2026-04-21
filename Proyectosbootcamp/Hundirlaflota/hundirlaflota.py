@@ -1,4 +1,8 @@
 '''
+Los archivos que se utilicen para el juego hay que tenerlos en una carpeta aparte, fuera del repositorio del bootcamp.
+
+Habría que pensar en crear un juego más pequeño, para poder hacer la versión de prueba en la presentación.
+
 Primero hay que pensar en los pasos lógicos a seguir para crear el juego.
 
 Elementos que debe tener:
@@ -12,13 +16,32 @@ Elementos que debe tener:
     - Función para saber si he acertado o fallado (también valdrá para el ordenador)
     - Función para que dispare el ordenador
     - Función 
+    - Crear un archivo (o varios) de clases para los distintos tipos de barcos
+    - De momento tendríamos el archivo principal, uno de funciones y otro de la clase barcos
     
 '''
+# IMPORTAR LIBRERÍAS
+
 import utils
+import numpy as np
+
+# CREAR EL TABLERO E IMPRIMIRLO
 
 mi_tablero = utils.crear_tablero() # Llamo a la función y la guardo como variable
 
-print("--- TEST DE TABLERO ---") 
-print(mi_tablero) # Imprimo el tablero
+print()
+print("        --- TABLERO DEL JUGADOR ---") 
+print()
+print(mi_tablero) # Imprimo mi tablero
+print()
+print("        --- TABLERO DE LA MÁQUINA ---") 
+print()
+print(mi_tablero) # Imprimo el tablero del rival
 
-print(f"Dimensiones: {mi_tablero.shape}") # Compruebo nº de filas y columnas
+barcos_jugador = [[(0,1), (0,2)], [(3,4), (4,4), (5,4)]] # creo dos barcos
+
+tablero_jugador_barcos = utils.colocar_barcos(barcos_jugador, mi_tablero) # pongo los barcos en el tablero
+print()
+print("        --- TABLERO CON BARCOS ---")
+print()
+print(tablero_jugador_barcos) # imprimo el tablero con los dos barcos

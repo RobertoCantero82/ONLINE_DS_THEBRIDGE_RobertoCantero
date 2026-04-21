@@ -31,16 +31,19 @@ def crear_tablero(tamaño:tuple = (10,10)):
    '''
    Un tablero por defecto de 10x10 relleno del carácter " " con numpy
    '''
-   tablero_jugador = np.full(tamaño, " ")
-   return tablero_jugador
+   tablero = np.full(tamaño, " ")
+   return tablero
     
-def colocar_barco(barco, tablero):
+def colocar_barcos(lista_barcos, tablero):
    '''
    Recibirá la lista de casillas de un barco y el tablero donde colocarlo. Prueba primero a posicionar un par de 
    barcos por ejemplo en [(0,1), (1,1)] y [(1,3), (1,4), (1,5), (1,6)]. Los barcos serán Os mayúsculas. 
    Como ves, un barco de dos posiciones de eslora y otro de cuatro.
    '''
-   lista_barcos
+   for barco in lista_barcos:
+    for coordenada in barco:
+        tablero[coordenada] = "O"
+   return tablero
 
 
     
@@ -50,10 +53,11 @@ def disparar(casilla, tablero):
    Prueba primero a disparar el barco de 2 casillas.
    '''
     
-def crear_barco(eslora):
+def crear_barcos(eslora):
    '''
    Deberá crear una lista de casillas de un barco en función a la eslora, de forma aleatoria.
    '''
+
     
 def barcos_aleatorios():
    '''
